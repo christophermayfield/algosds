@@ -12,4 +12,5 @@ def quick_sort(arr):
     return quick_sort(left) + middle + quick_sort(right)
 
 
-    
+arr = [10, 7, 8, 9, 1, 5]
+print(quick_sort(arr))    
