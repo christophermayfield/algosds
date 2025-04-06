@@ -15,8 +15,9 @@ def slide(houses):
         prev_max = best_max
         best_max = total
         
+        
     return best_max
 
 houses = [2,3,5,1,3]
 
-print(f"the most money we can make is {rob(houses)}")
+print(f"the most money we can make is {rob(houses)} bandos")
