@@ -13,4 +13,14 @@ def radix_sort(arr):
 
 def counting_sort_exp(arr,exp):
     #This function will be sorted based on digit at exp place 
-    pass 
+    n = len(arr)
+    output = [0] * n #final sorted array (by current digits)
+    count = [0] * 10 #count for each digit [0-9]
+
+    #step 1 count occurances of digits at exp place 
+    for i in range(n):
+        index = (arr[i] // exp) % 10 
+        count[index]+=1
+
+    #step 2 make counts cumulative (so we know the positions)
+    
