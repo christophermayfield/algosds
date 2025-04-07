@@ -18,3 +18,18 @@ class SinglyLinkedList:
             current = current.next
         current.next = new_node
     
+    def print_list(self):
+        current = self.head 
+        while current:
+            print(current.data, end=' -> ')
+            current = current.next 
+        print("None")
+    
+    def delete(self,key):
+        current = self.head
+        prev = None
+
+        if current and current.data == key:
+            self.head = current.next
+            return 
+
