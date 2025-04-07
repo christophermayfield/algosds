@@ -27,6 +27,19 @@ def bucket_sort(arr):
     for num in arr:
         index = int((num-min_value) / (max_value - min_value) * (bucket_count - 1))
         buckets[index].append(num)
-        
+
+    #sort each bucket and concatenate the results 
+    sorted_arr = []
+    for bucket in buckets:
+        insertion_sort(bucket)
+        sorted_arr.extend(bucket)
+    return sorted_arr
+
+
+#usage
+arr = [0.42, 0.32, 0.56, 0.21, 0.12, 0.34, 0.99]
+sorted_arr = bucket_sort(arr)
+print("Sorted array:", sorted_arr)
+
 
 
