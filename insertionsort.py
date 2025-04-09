@@ -2,6 +2,7 @@ def insertion_sort(arr):
     for i in range(1, len(arr)):
         key = arr[i]  # The element to be placed correctly
         j = i - 1
+
         
         print(f"Iteration {i}: Trying to place {key}")
         
@@ -18,6 +19,6 @@ def insertion_sort(arr):
     return arr
 
 # Example usage
-array = [8, 4, 6, 2, 9]
+array = [3,2,5,1,0,1]
 sorted_arr = insertion_sort(array)
 print("Sorted array:", sorted_arr)
