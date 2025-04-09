@@ -8,20 +8,22 @@ class Queue:
         return (len(self.items) == 0)
     
 
-    def add(self, item):
+    def enqueue(self, item):
         self.items.append(item)
 
-    def remove(self):
-        self.items.pop()
+    def dequeue(self):
+        if self.is_empty():
+            raise IndexError("Queue is empty")
+        return self.items.pop(0)
+    
 
-    def check_line_length(self):
-        print(len(self.items))
+    def size(self):
+        return len(self.items)
+    def __str__(self):
+        return str(self.items)
+    
     
 
 
 myq = Queue()
-myq.add(55)
-myq.add(73)
-myq.add(22)
 
-print(myq.is_empty())
