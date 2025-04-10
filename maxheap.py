@@ -69,7 +69,7 @@ class MaxHeap:
 # Example usage
 if __name__ == "__main__": #dunder name, dunder main
     heap = MaxHeap()
-    elements = [15, 10, 20, 17, 9,8]
+    elements = [15, 10, 20, 17, 9,8,12]
 
     for el in elements:
         heap.insert(el)
