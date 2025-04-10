@@ -55,7 +55,10 @@ class MaxHeap:
             self._heapify_down(0)
         return max_value
 
-    
+    def peek_max(self):
+        if not self.heap:
+            raise IndexError("Heap is empty")
+        return self.heap[0]
 
     def __str__(self):
         return str(self.heap)
