@@ -20,3 +20,7 @@ class MinHeap:
         self.heap[0] = self.heap.pop()
         self._bubble_down(0)
         return min_val
+    def peek(self):
+        if not self:
+            return None
+        return self.heap[0]
