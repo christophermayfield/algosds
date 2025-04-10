@@ -14,3 +14,4 @@ def quick_sort(arr):
 
 arr = [10, 7, 8, 9, 1, 5]
 print(quick_sort(arr))    
+
