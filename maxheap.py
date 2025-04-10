@@ -48,9 +48,11 @@ class MaxHeap:
     def extract_max(self):
         if not self.heap:
             raise IndexError("Heap is empty")
+        
         max_value = self.heap[0]
         self.heap[0] = self.heap[-1]
         self.heap.pop()
+        
         if self.heap:
             self._heapify_down(0)
         return max_value
@@ -65,9 +67,9 @@ class MaxHeap:
 
 
 # Example usage
-if __name__ == "__main__":
+if __name__ == "__main__": #dunder name, dunder main
     heap = MaxHeap()
-    elements = [15, 10, 20, 17, 8]
+    elements = [15, 10, 20, 17, 9,8]
 
     for el in elements:
         heap.insert(el)
